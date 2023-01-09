@@ -27,11 +27,14 @@ nav.act {background:#262626;}
 nav> div {
 	max-width:1490px; margin:auto; display:flex;
 }
+nav img {
+	transform: translateX(-10px) translateY(-7px);
+	filter: drop-shadow(0 1px 1px #000);
+	width:30pt; }
 nav p {
 	color:white; font-size:1.2rem;
-	flex:1;
+	flex:1; text-shadow:0 1px 1px black;
 }
-#menu {}
 #menu a {
 	color:white; margin-left:20pt;
 	text-shadow:0 0 10px black;
@@ -39,35 +42,61 @@ nav p {
 
 
 /*헤더(배경이미지)*/
-#top {
-	height:100vh;
-	background:url("../images/bg.jpg") no-repeat fixed center top/ cover;
+#top { background :#d0d5e1; }
+video {
+	width:100%;
 }
+#scroll { 
+	position: absolute; top: 0%; width: 100%;
+}
+.op img {
+	position: relative; width:280px;
+	margin:auto; 
+	margin-top:10vh;
+	/* border:1px solid red; */
+	filter: drop-shadow(5px 5px 5px #000);
+}
+.op2 {
+	animation: op2 3s infinite;
+}
+
+@keyframes op2 {
+	50% {
+			opacity: 0;
+	}
+}
+
 #typing {	
-	height:60vh; color:white; text-align:center; line-height:160%;
-	font-size:2.5rem; padding:40vh 1px 0 1px;
+	height:-60vh; color:white; text-align:center; line-height:160%;
+	font-size:2.5rem;
 	text-shadow:0 1px 10px black;
+	/* border:2px solid black; */
 }
 #click {	
-	max-width:100px; margin:auto; margin-top:30vh;
+	display:block;
+	max-width:100px; margin:auto; 
 	text-align:center;
+	transform: translateY(35vh);
+	border:1px solid red;
 }
 #click i {
 	font-size:2.5rem; color:white; display:block;
 	animation:upDown 1s infinite;
+	text-shadow:0 1px 1px black;
 }
 @keyframes upDown {
 	from 	{transform:translateY(-10pt); opacity:0;}
 	to 		{transform:translateY(0pt);   opacity:1;}
 }
 
-#click a {color:white;}
+#click a {color:white; text-shadow:0 1px 1px #666;}
 
 
 /*** 공통: About / Portfolio / Event / Contant */
 .area {
 	border:1px solid red;
 	padding:15vh 0 10vh 0; min-height:100vh;
+	top:0;
 }
 
 .area h2 {
@@ -77,39 +106,50 @@ nav p {
 /*About(자기소개)*/
 #about {
 	padding-bottom: 200px;
-	border:2px solid blue;
+	/* border:2px solid blue; */
 	background:#d0d5e1 ;
 }
 #about img {
 	width:100%;
-	height: 80%;
-	margin-top:73px;
-	border:1px solid green;
+	/* height: 60%; */
+	margin-top:130pt;
 }
 #sec1> p {
-	border:1px solid black;
 	max-width:200pt; margin:auto; text-align:center;
+	transform: translateY(70pt);
+	font-size:18pt !important;
+	font-weight: 700 !important;
+}
+#sec1	{ 
+	background: #becae8;
+	margin-right:50px;
 }
 #about mark {
-	background:white; font-size:0.8rem; opacity: 60%;
+	margin-right:10px;
+	background:white; font-size:1.1rem; opacity: 0.4;
 }
 #about span {
-	transform:translateX(-15px); display:inline-block;
+	font-size: 1.9rem !important; margin:auto;
+	font-family: 'Nanum Pen Script', cursive;
+	transform:translateX(-25px) translateY(-33px); display:inline-block;
+}
+.text{
+  display: inline; vertical-align: middle;
+  border-right: .05em solid black;
+  animation:  cursor 0.2s ease infinite;
 }
 /*profile / Experiences & Education / skill*/
 #about> div {	
 	max-width:850pt; margin:auto; display:flex;
 	/* border:1px solid magenta; */
 }
-
-#sec1	{ 
-	/* border:1px solid black;  */
-	background: #becae8;}
+#sec { 
+}
 #about h3 		{padding:50pt 0  10pt 0;}
 #about p 		{font-size:0.9rem; font-weight:300;}
 #sec2 {
-  /* border:3px solid olive;  */
 	padding:20px; top:0;
+	/* margin-left:50px; */
 }
 
 /*profile*/
@@ -129,13 +169,13 @@ nav p {
 	display:inline-block; width:45%;
 }
 #skill progress {
-	width:53%; -webkit-appearance:none;
+	width:40%; -webkit-appearance:none;
 }
 #skill ::-webkit-progress-bar {
 	background:#eee; height:10px; border-radius:5px;
 }
 #skill ::-webkit-progress-value {
-	background:#00aeff; border-radius:5px;
+	background:#9fb4e7; border-radius:5px;
 }
 
 
@@ -156,6 +196,7 @@ nav p {
 
 #portfolio h3 {
 	font-size:1.8rem; padding-bottom:20pt;
+	
 }
 #portfolio ul {
 	list-style:none; line-height:180%;
@@ -173,15 +214,42 @@ nav p {
 #portfolio a:hover {
 	background:#555; color:white;
 }
-
-
+#portfolio h2 {
+	margin-bottom:200px;
+}
 /*첫번째 포폴 (아래에서 위로 서서히 올라온다) */
 #port1 {
 	padding:10vh 0 17vh 0; transform:translateY(100pt);
 	opacity:0; transition:2s;
 }
 #port1.act {transform:translateY(0pt); opacity:1;}
-#port1 img {transform:translateY(-40pt);}
+#port1 img {transform:translateY(-6pt) scale(1.2);
+}
+#mainimg { 
+	width: 1280px; height: 600px;
+	margin:auto; opacity: 0;
+}
+#mainimg.act { 
+	width: 1280px; height: 600px;
+	margin:auto; opacity: 1;
+	transform:translateY(-100pt);
+	transition:2s;
+}
+#port1 h3 {
+	color:#027128;
+}
+#port1 a {
+	color:#027128;
+	border:1px solid #027128;
+}
+#port1 a:hover {
+	color:white;
+	background:#027128;
+	border:1px solid #027128;
+}
+
+
+
 
 /*두번째 포폴*/
 #port2 			{}
@@ -250,7 +318,7 @@ nav p {
 }
 #contact section { flex:1; text-align: center;}
 #contact i, #contact a.fas {
-	font-size: 5rem; color:mediumpurple;
+	font-size: 5rem; color:#9fb4e7;
 	padding-bottom:10pt;
 }
 #contact a:last-child {color:black;}
@@ -278,13 +346,26 @@ nav p {
 	nav {padding:10pt 5pt 5pt 5pt;}
 	nav>div {flex-direction:column;}
 	nav p  	{margin-bottom:5pt;}
-	
+	#navlogo { display: flex; padding-left: 10px; border:2px solid blakc}
+	#navlogo p { border:1px solid red;}
 	#menu a:first-child {margin-left:0;}
 	#menu a {font-size:0.9rem; }
-	#typing {font-size:2rem;}
-	
-	#about> div {flex-direction:column; padding:0 10pt;}
-	#about img 	{width:100%;}
+	video {
+		transform: translateY(2vh);
+		width:100%;
+		height: 60vh;
+	}
+
+	#typing {font-size:1.1rem;
+		top:0; padding:10;}
+	#scroll img { width:100px; transform: translateY(20vh);}
+	#click { display: none;
+		font-size:0.5rem;
+		transform: translateY(-10vh);}
+	#about h2 { font-size:2rem;}
+	#sec1 { margin:auto;}
+	#sec1 p { padding:0;}
+	#about> div {flex-direction:column; padding:10pt;}
 	#skill label{width:38%;}
 	#skill progress {width:58%;}
 	
@@ -299,7 +380,10 @@ nav p {
 	#portfolio a {padding:4pt 6pt 5px 6px;}
 		
 	#port1 {padding-top:0; transform:translateY(0pt); opacity:1;}
-	
+	#port1 h3 { margin-top:10vh;}
+	#mainimg {
+					width: 500px !important; height: 300px !important;
+	}
 	#port2 {padding-bottom:100pt;}
 	#port2 div.left {transform:translateX(0);}
 	#port2 div.right{transform:translate(0,30pt);}
@@ -308,6 +392,7 @@ nav p {
 	#port3 img {transform:translateY(0pt);}
 	#port3 div.left {padding-top:30pt; transform:scale(1);}
 	#port3 div.right {transform:scale(1);}
+	#event h2 { line-height: 120%;}
 }
 
 

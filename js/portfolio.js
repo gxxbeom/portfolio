@@ -18,7 +18,7 @@ $(document).ready(function(){
 	}
 	
 	//타자치는 효과
-	const $typing = "안녕하세요.\n홍길동의 포트폴리오입니다.";
+	const $typing = "안녕하세요.\n조규범의 포트폴리오 입니다.";
 	//console.log( $typing[7]  );
 	const tyLen  = $typing.length;
 	console.log( tyLen ); //21개
@@ -34,15 +34,36 @@ $(document).ready(function(){
 		}
 	}
 	type();	
-	
+	//함께하고싶은사람 타이핑효과
+	"use strict";
+const content = "함께 하고 싶은"
+const text = document.querySelector(".text")
+let index = 0;
+
+function sleep(delay){ 
+		const start = new Date().getTime(); 
+		while (new Date().getTime() < start + delay); 
+    }
+
+function typing(){
+    text.textContent += content[index++];
+    if(index > content.length){
+        text.textContent = ""
+        index = 0;
+        // sleep(3000);
+    }
+}
+setInterval(typing, 200);
 	
 	
 	//콘텐츠의 top값을 절대값으로 얻어온다. /상대값은 position().top
 	//절대값은 기준이 윈도우 / 상대값은 기준이 부모
-	const aboutTop = $("#about").offset().top;
-	const port1Top = $("#port1").offset().top - 400;
-	const port2Top = $("#port2").offset().top - 400;
-	const port3Top = $("#port3").offset().top - 400;
+	const aboutTop = $("#about").offset().top - -100;
+	const port1Top = $("#port1").offset().top - 800;
+	const port1main = $("#mainimg").offset().top - 500;
+	const port2Top = $("#port2").offset().top - 500;
+	const port3Top = $("#port3").offset().top - 500;
+	const span = $("#about span").offset().top - 600;
 	
 	let st = 0;
 	//스크롤바를 내렸을때의 효과 (스크롤이벤트 감지!)
@@ -51,19 +72,25 @@ $(document).ready(function(){
 		console.log(st);
 		if( st>= aboutTop ){
 			//About에서 오른쪽 "skill" bar 애니메이션
-			$("#photo progress").animate({value : 90});
-			$("#html progress").delay(100).animate({value : 80});
-			$("#jquery progress").delay(200).animate({value : 70});
-			$("#oven progress").delay(300).animate({value : 80});			
+			$("#photo progress").animate({value : 70});
+			$("#html progress").delay(100).animate({value : 60});
+			$("#jquery progress").delay(200).animate({value : 50});
+			$("#oven progress").delay(300).animate({value : 60});			
 		}
 		if( st>= port1Top ){
 			$("#port1").addClass("act");
+		}
+		if( st>= port1main ){
+			$("#mainimg").addClass("act");
 		}
 		if( st>= port2Top ){
 			$("#port2").addClass("act");
 		}
 		if( st>= port3Top ){
 			$("#port3").addClass("act");
+		}
+		if( st>= span ){
+			$("#about span").addClass("act");
 		}
 	});
 	

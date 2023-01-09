@@ -7,14 +7,15 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/portfolio.js"></script>
 <link rel="shortcut icon" href="images/logo.png" title="로고">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
 <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
 	<nav>
-		<div>
-			<p>Hong Gil Dong</p>
+		<div id="navlogo">
+			<img src="images/logo.png" alt="logo">
+			<p>Cho Gyu Beom</p>
 			<div id="menu">
 				<a href="#top">Home</a>
 				<a href="#about">About</a>
@@ -25,43 +26,54 @@
 		</div>
 	</nav>
 	<header id="top">
-		<div id="typing"></div>
-		<div id="click">
-			<i class="fas fa-chevron-down"></i>
-			<a href="#about">Scroll</a>
+		<div class="topbg">
+			<video muted autoplay loop>
+				<source src="videos/Ink - 64633 (1).mp4" type="video/mp4">
+				<strong>Your browser does not support the video tag.</strong>
+			</video>
+			<div id="scroll">
+				<div class="op op2"><img src="images/logo2.png"></div>
+				<div id="typing">
+				</div>
+				<div id="click">
+					<i class="fas fa-chevron-down"></i>
+					<a href="#about">Scroll</a>
+				</div>
+			</div>
 		</div>
 	</header>
 	<section id="about" class="area">
-		<h2>About</h2>
+		<h2>ABOUT</h2>
 		<div id="sec">
 			<section id="sec1">
 				<p>
-					&#34; <mark>________________________</mark> 사 람&#34;<br>
-					<span>맡은 일을 꿋꿋히 수행하는</span>
+					&#34; <mark>__________________</mark>사 람&#34;<br>
+					<span class="text"></span>
 				</p>
 				<img src="images/profile.png" alt="조규범프로필">
 			</section>
 			<div id="sec2">
 				<section>
-					<h3>Profile</h3>
+					<h3>PROFILE</h3>
 					<p>
-						이름 : 홍길동 (Hong Gil Dong)<br>
-						나이 : 00세 (2001.02.03)<br>
-						주소 :  경기도 고양시 일산동구 중앙로<br>
-						연락처 : 010-1234-5678<br>
-						E-mail :gildonghong@google.com
+						이름 : 조규범 (Cho Gyu Beom)<br>
+						나이 : 28세 (1996.11.20)<br>
+						주소 : 경기도 성남시 분당구 장미로<br>
+						연락처 : 010 - 3993 - 4877<br>
+						E-mail : anais1120@naver.com
 					</p>
 				</section>
 				<section>
-					<h3>Experiences & Education</h3>
+					<h3>EXPERIENCES & EDUCATION</h3>
 					<p>
 						2022.09 - 2023.01 : 이젠컴퓨터아트학원 웹디자인 & 웹퍼블리셔과정 수료<br>
-						0000.03 - 0000.02 : 00대학교 000과 졸업<br>
-						0000.03 - 0000.02 : 00고등학교 광고 홍보학과 졸업
+						2020.11 - 2022.05 : 대한민국 육군 병장 만기제대<br>
+						2016.03 - 2020.02 : 강동대학교 뷰티코디네이션과 졸업<br>
+						2012.03 - 2015.02 : 이매고등학교 졸업
 					</p>
 				</section>
 				<section id="skill">
-					<h3>Skill</h3>
+					<h3>SKILL</h3>
 					<form>
 						<p id="photo">						
 							<label>Photoshop, Illustrator</label>
@@ -85,7 +97,8 @@
 		</div>
 	</section>
 	<div id="portfolio" class="area">
-		<h2>Web Site</h2>
+		<h2>WEB DESIGN</h2>
+		<img src="images/01.png" alt="스위스나린" id="mainimg">
 		<section id="port1">
 			<div class="left">
 				<h3>스위스 나린</h3>
@@ -116,7 +129,7 @@
 				<a href="https://gxxbeom.github.io/nahrin/" target="_blank">웹사이트 바로가기</a>
 			</div>
 			<div class="right">
-				<img src="images/nahrin.png" alt="포트폴리오 나린">
+				<img src="images/03.png" alt="포트폴리오 나린">
 			</div>			
 		</section>
 		<section id="port2">
@@ -187,7 +200,7 @@
 		</section>
 	</div>
 	<section id="event" class="area">
-		<h2>Event and Detail</h2>
+		<h2>EVENT & DETAIL</h2>
 		<div>
 			<div>
 				<img src="images/event-1.jpg" alt="달콤한 할인 혜택">
@@ -277,19 +290,19 @@
 	</section>
 	<section id="contact" class="area">
 		<h2>
-			Contact us
+			CONTACT US
 			<b>소중한 연락을 기다립니다!</b>
 		</h2>		
 		<div>
 			<section>
 				<i class="fas fa-envelope"></i>
 				<h3>E-mail</h3>
-				<p>hong@google.com</p>
+				<p>anais1120@naver.com</p>
 			</section>
 			<section>
 				<a class="fas fa-phone-alt" href="tel:010-1234-5678"></a>
 				<h3>Phone</h3>
-				<a href="tel:010-1234-5678">010.1234.5678</a>
+				<a href="tel:010-1234-5678">010 - 3993 - 4877</a>
 			</section>
 		</div>
 	</section>
