@@ -36,7 +36,7 @@ nav img {
 	width:30pt; }
 nav p {
 	color:white; font-size:1.2rem;
-	flex:1; text-shadow:0 1px 1px black;
+	flex:1; text-shadow:0 0 10px black;
 }
 #menu a {
 	color:white; margin-left:20pt;
@@ -46,6 +46,7 @@ nav p {
 
 /*헤더(배경이미지)*/
 #top { background :#d0d5e1; }
+
 video {
 	width:100%;
 }
@@ -380,15 +381,48 @@ video {
 	nav>div {flex-direction:column;}
 	nav p  	{margin-bottom:5pt;}
 	#navlogo { display: flex; padding-left: 10px; }
-	#navlogo p {}
+	#navlogo >div { display:flex;}
+	#navlogo >div p { }
 	#menu a:first-child {margin-left:0;}
 	#menu a {font-size:0.9rem; }
-	video {
+	#topbg video {
 		transform: translateY(2vh);
 		width:100%;
 		height: 60vh;
 	}
-
+	/* 모바일 글씨 크기 조정 */
+	.area h2 { font-size:2rem;}
+	#port1 div h3 {
+		font-size:1.2rem;
+	}
+	#port1 div b {
+		font-size:0.8rem;
+		line-height: 140%;
+	}
+	#port1 div span {
+		font-size:0.8rem;
+		line-height: 140%;
+	}
+	#port1 div a {
+		font-size:0.8rem;
+		line-height: 140%;
+	}
+	#port2 div h3 {
+		font-size:1.2rem;
+	}
+	#port2 div b {
+		font-size:0.8rem;
+		line-height: 140%;
+	}
+	#port2 div span {
+		font-size:0.8rem;
+		line-height: 140%;
+	}
+	#port2 div a {
+		font-size:0.8rem;
+		line-height: 140%;
+	}
+	/* ----------------------- */
 	#typing {font-size:1.1rem; height:80px;
 		top:0; padding:10;}
 	#scroll img { width:100px; transform: translateY(20vh);}
@@ -417,15 +451,51 @@ video {
 	#mainimg {
 					width: 500px !important; height: 300px !important;
 	}
-	#port2 {padding-bottom:100pt;}
 	#port2 div.left {transform:translateX(0);}
 	#port2 div.right{transform:translate(0,30pt);}
+	#port2 div.left {
+		width:90vw;
+		margin:auto;
+
+	}
+	#port2 div.left img {
+		width:100%;
+		height: 100%;
+		margin:auto;
+	}
+	#port2flex .right {
+		display:flex;
+		flex-direction: column;
+	}
+	#port2flex .right video{
+		width: 100%;
+		margin-bottom: 30px;
+	}
 	
 	#port3 {padding-top:30vh;}
 	#port3 img {transform:translateY(0pt);}
 	#port3 div.left {padding-top:30pt; transform:scale(1);}
 	#port3 div.right {transform:scale(1);}
+	/* -------- */
 	#event h2 { line-height: 120%;}
+	/* #event>div  {
+		display: flex;
+	} */
+	#event div img {
+		width:50vw;
+		margin: auto;
+	}
+	
+	#contact h2 b {
+		font-size:1rem;
+	}
+	#contact section h3 {
+		font-size:0.9rem;
+	}
+	#contact section p {
+		font-size:0.9rem;
+	}
+
 }
 
 
