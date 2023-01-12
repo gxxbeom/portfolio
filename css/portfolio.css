@@ -22,7 +22,10 @@ nav {
 	padding:20pt 10pt 10pt 10pt;
 	font-weight:700;
 }
-nav.act {background:#262626;}
+nav.act {  position: sticky; width:100vw;
+  background:rgba(238, 238, 238, 0.8);
+  top:0; left:0;
+  z-index: 1; }
 
 nav> div {
 	max-width:1490px; margin:auto; display:flex;
@@ -92,7 +95,7 @@ video {
 
 /*** 공통: About / Portfolio / Event / Contant */
 .area {
-	border:1px solid red;
+	/* border:1px solid red; */
 	padding:15vh 0 10vh 0; min-height:100vh;
 	top:0;
 }
@@ -187,10 +190,10 @@ video {
 #portfolio section {display:flex;}
 #portfolio section:not(:first-of-type){
 	min-height:100vh; padding-top:20vh;
+	
 }
 
-#portfolio div {}
-#portfolio div.left {
+#port1 div.left {
 	margin-right:60pt;
 }
 
@@ -252,27 +255,57 @@ video {
 
 
 /*두번째 포폴*/
-#port2 			{}
-#port2 div.left {transform:translateX(-50vw);     transition:2s;}
-#port2 div.right{transform:translate(50vw, 20pt); transition:2s;}
+#port2 { 
+	/* border:1px dashed green; */
+	margin-bottom: 200px;
+}
+#port2 .right { 
+	display:flex;
+}
+#port2 .right div { 
+	/* border:1px solid blue; */
+	margin:auto;
+	margin-left:20px;
+}
+
+#port2 img {
+	width: 80vw;
+	height: 50vh;
+	/* margin-right:60pt; */
+}
+#port2 .left { 
+	margin: auto;
+	width:50vw;
+	/* border:2px solid black; */
+	margin-bottom: 40pt;
+}
+#port2 .right video {
+	width:44vw;
+}
+#port2 div.left {transform:translateX(-100vw);     transition:2s;}
+#port2 div.right{transform:translate(50vw, 20pt); transition:4s;}
 
 #port2.act div.left  {transform:translateX(0);}
 #port2.act div.right {transform:translate(0, 20pt);}
 
-
-/*세번째 포폴*/
-#port3 img {
-	transform:translateY(-40pt);
+#port2 h3 {
+	color:#86582b;
 }
-#port3 div.left  {transform:scale(0); transition:2s;}
-#port3 div.right {transform:scale(0); transition:2s;}
-#port3.act div.left  {transform:scale(1);}
-#port3.act div.right {transform:scale(1);}
+#port2 a {
+	color:#86582b;
+	border:1px solid #86582b;
+}
+#port2 a:hover {
+	color:white;
+	background:#86582b;
+	border:1px solid #86582b;
+}
+
 
 
 /* Event */
 #event {
-	border:3px solid red;
+	/* border:3px solid red; */
 	max-width:900px; margin:auto;
 }
 #event>div {
@@ -346,7 +379,7 @@ video {
 	nav {padding:10pt 5pt 5pt 5pt;}
 	nav>div {flex-direction:column;}
 	nav p  	{margin-bottom:5pt;}
-	#navlogo { display: flex; padding-left: 10px; border:2px solid blakc}
+	#navlogo { display: flex; padding-left: 10px; }
 	#navlogo p {}
 	#menu a:first-child {margin-left:0;}
 	#menu a {font-size:0.9rem; }
