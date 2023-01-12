@@ -62,7 +62,6 @@ setInterval(typing, 200);
 	const port1Top = $("#port1").offset().top - 800;
 	const port1main = $("#mainimg").offset().top - 500;
 	const port2Top = $("#port2").offset().top - 500;
-	const port3Top = $("#port3").offset().top - 500;
 	const span = $("#about span").offset().top - 600;
 	
 	let st = 0;
@@ -85,9 +84,6 @@ setInterval(typing, 200);
 		}
 		if( st>= port2Top ){
 			$("#port2").addClass("act");
-		}
-		if( st>= port3Top ){
-			$("#port3").addClass("act");
 		}
 		if( st>= span ){
 			$("#about span").addClass("act");
