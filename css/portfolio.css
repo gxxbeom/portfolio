@@ -472,10 +472,7 @@ video {
 		margin-bottom: 30px;
 	}
 	
-	#port3 {padding-top:30vh;}
-	#port3 img {transform:translateY(0pt);}
-	#port3 div.left {padding-top:30pt; transform:scale(1);}
-	#port3 div.right {transform:scale(1);}
+
 	/* -------- */
 	#event h2 { line-height: 120%;}
 	/* #event>div  {
