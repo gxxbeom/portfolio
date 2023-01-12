@@ -455,7 +455,6 @@ video {
 	#port2 div.right{transform:translate(0,30pt);}
 	#port2 div.left {
 		width:90vw;
-		border:1px solid red;
 		margin:auto;
 
 	}
