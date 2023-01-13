@@ -18,7 +18,7 @@ $(document).ready(function(){
 	}
 	
 	//타자치는 효과
-	const $typing = "안녕하세요.\n조규범의 포트폴리오 입니다.";
+	const $typing = "Wellcome to \n GyuBeom's Portfolio!";
 	//console.log( $typing[7]  );
 	const tyLen  = $typing.length;
 	console.log( tyLen ); //21개
